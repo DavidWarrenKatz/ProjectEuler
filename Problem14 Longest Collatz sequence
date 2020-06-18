@@ -1,0 +1,21 @@
+n = 1 
+longestChain = 0
+highestStart = 1
+
+for n in range (1, 1000000)   :                             
+    counter = 0
+    m = n
+    while m != 1:
+        if m%2 == 0 :
+            m = m/2
+            counter +=1
+        else:
+            m = 3*m+1
+            counter +=1
+
+    if counter > longestChain:
+        longestChain = counter
+        highestStart = n        
+    n+=1
+    
+print("Longest Chain is {}, which starts at {}.".format(longestChain, highestStart)) 
