@@ -1,0 +1,12 @@
+first = 1
+second = 2
+evenSum = 2
+
+while first + second < 4000000:
+    newist = first + second
+    if newist%2 == 0:
+        evenSum += newist
+    first = second
+    second = newist
+
+print(evenSum)
