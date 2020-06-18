@@ -1,0 +1,15 @@
+#find largest prime factor of x
+
+x = 600851475143  
+largestPrimeFactor = 1
+
+m = 2
+while x > 1:                    
+    
+    if x%m ==0:                  #if x is divisible by m
+        largestPrimeFactor = m
+        while x%m == 0:    
+            x = x/m            #take out all factors m
+    m+=1
+
+print(largestPrimeFactor)
